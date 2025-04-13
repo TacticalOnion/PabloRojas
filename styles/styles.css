@@ -8,6 +8,7 @@
 
 ul,ol{
     list-style: none;
+    
 }
 
 /*================[ BODY ]*/
@@ -20,6 +21,19 @@ body{
 
 body img{
     border-radius: 10px;
+}
+
+/*================[ LINKS ]*/
+a{
+    color: #16886b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
 }
 
 /*================[ SECTIONS ]*/
@@ -102,6 +116,7 @@ section{
     
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 
 #nav-bar.scrolled{
@@ -138,7 +153,10 @@ section{
 
 /*================[ CARD ]*/
 .card{
-    background: red;
+    color: black;
+    background: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+
     border-radius: 10px;
 
     width: 100%;
@@ -148,6 +166,11 @@ section{
 
 .card-content{
     padding: 3em;
+}
+
+.card:hover{
+    scale: 1.1;
+    transition: 0.3s ease-in-out;
 }
 
 /*================[ ABOUT ME ]*/
@@ -163,6 +186,10 @@ section{
 }
 
 /*================[ EXPERIENCE ]*/
+#experience .card{
+    width: 70%;
+}
+
 #experience .card-content{
     text-align: center;
 }
@@ -194,6 +221,16 @@ section{
     border-bottom-left-radius: 0;
 }
 
+.certificate{
+    position: relative;
+}
+
+.certificate a{
+    position: absolute;
+    top: 2em;
+    right: 2em;
+}
+
 /*================[ EDUCATION ]*/
 .mail{
     display: flex;
@@ -209,7 +246,7 @@ section{
 }
 
 .mail p{
-    background: red;
+    background: gray;
     border: 2px solid black;
 
     padding: 0.5em;
@@ -220,7 +257,7 @@ section{
 /*================[ FOOTER ]*/
 
 footer{
-    background: red;
+    background: #16886b;
     padding: 3em;
 
     display: flex;
