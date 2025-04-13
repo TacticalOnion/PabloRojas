@@ -23,6 +23,20 @@ body img{
     border-radius: 10px;
 }
 
+/*================[ HEADERS ]*/
+h2{
+    font-size:3em;
+}
+
+h3{
+    font-size: x-large;
+}
+
+/*================[ PARAGRAPH ]*/
+p, time{
+    font-size: 1.3rem;
+}
+
 /*================[ LINKS ]*/
 a{
     color: #8eb72f;
@@ -336,7 +350,11 @@ background: linear-gradient(0deg,rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0) 100
     right: 2em;
 }
 
-/*================[ EDUCATION ]*/
+/*================[ CONTACT ]*/
+#contact p{
+    text-align: center;
+}
+
 .mail{
     display: flex;
     flex-direction: row;
@@ -354,7 +372,7 @@ background: linear-gradient(0deg,rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0) 100
 .mail p{
     background: #B3E73A;
     border: 2px solid black;
-
+    
     padding: 0.5em;
     width: 80%;
     border-radius: 10px;
