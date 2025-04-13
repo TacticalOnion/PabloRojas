@@ -30,10 +30,30 @@ a{
     font-weight: bold;
 }
 
-.links{
+.badges{
     display: flex;
     flex-direction: row;
-    gap: 1em;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+
+.badge-link, span{
+    color: white;
+    font-size: small;
+
+    background: #16886b;
+
+    padding: 0.5em;
+    border-radius: 10px;
+    width: fit-content;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.badge-link:hover{
+    scale: 1.1;
+    transition: 0.3s ease-in-out;
 }
 
 /*================[ SECTIONS ]*/
@@ -178,11 +198,22 @@ section{
     display: flex;
     flex-direction: row;
     gap: 1em;
+
+    box-shadow: none;
+    background: none;
+}
+
+#about-me .card-content{
+    padding: 0;
 }
 
 #about-me img{
     width: 30%;
     
+}
+
+#about-me .card:hover{
+    scale: none;
 }
 
 /*================[ EXPERIENCE ]*/
@@ -191,6 +222,9 @@ section{
 }
 
 #experience .card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
@@ -241,6 +275,7 @@ section{
     justify-content: center;
 
     margin-top: 2em;
+    gap: 0.5em;
 
     width: 80%;
 }
@@ -251,7 +286,7 @@ section{
 
     padding: 0.5em;
     width: 80%;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 /*================[ FOOTER ]*/
