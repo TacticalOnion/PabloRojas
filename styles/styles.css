@@ -25,9 +25,14 @@ body img{
 
 /*================[ LINKS ]*/
 a{
-    color: #16886b;
+    color: #8eb72f;
     text-decoration: none;
     font-weight: bold;
+}
+
+a:hover{
+    scale: 1.2;
+    transition: 0.3s ease-in-out;   
 }
 
 .badges{
@@ -40,10 +45,10 @@ a{
 }
 
 .badge-link, span{
-    color: white;
+    color: black;
     font-size: small;
 
-    background: #16886b;
+    background: #b3e73a;
 
     padding: 0.5em;
     border-radius: 10px;
@@ -64,7 +69,7 @@ a{
 .icon svg{
     width: 1.2em;
     height: 1.2em;
-    stroke: white;
+    stroke: black;
     fill: none;
     stroke-linejoin:round;
     stroke-linecap:round;
@@ -89,33 +94,8 @@ section{
 .banner {
     position: relative;
 
-    height: 92vh;
+    height: 100vh;
     width: 100%;
-}
-
-.banner-background{
-    position: absolute;
-
-    height: 100%;
-    width: 100%;
-
-    background: url('../assets/image-test.jpg') no-repeat center center/cover;
-    background-attachment: fixed;
-
-    z-index: 0;
-}
-
-.banner-background::before{
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    content: '';
-    
-    width: 100%;
-    height: 100%;
-
-    background-color: rgba(0, 0, 0, 0.5);  
 }
 
 .banner-content {
@@ -131,11 +111,37 @@ section{
 }
 
 .banner h1{
-    font-size: 8vw;
+    font-size: 15vh;
+    line-height: 1;
 }
 
 .banner p{
-    font-size: 3vw;
+    font-size: 5vh;
+}
+
+.video-container{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+
+.video-container::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);  
+}
+
+
+
+.video-container video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 /*================[ NAV-BAR ]*/
@@ -144,7 +150,13 @@ section{
     height: 8vh;
     width: 100%;
 
-    background: #16886b;
+    background: #ffffff;
+background: linear-gradient(0deg,rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    
+    backdrop-filter: blur(8.2px);
+    -webkit-backdrop-filter: blur(8.2px);
+
+    margin: -8vh auto 8vh auto;
 }
 
 #nav-bar{
@@ -153,30 +165,30 @@ section{
     
     width: fit-content;
     height: 8vh;
-    border-radius: 0 0 10px 10px;
-
     display: flex;
     align-items: center;
     margin: 0 auto;
+    border-radius: 40px;
+    text-align: center;
     
+    padding-right: 1em;
+    padding-left: 1em;
+
     position: sticky;
     top: 0;
     z-index: 1;
+
+    margin: -8vh auto 8vh auto;
 }
 
 #nav-bar.scrolled{
-    background: rgba(22, 136, 107, 0.56);
+    background: rgba(180, 232, 58, 0.56);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8.2px);
     -webkit-backdrop-filter: blur(8.2px);
 
-    border-radius: 0 0 10px 10px;
     height: fit-content;
     height: 8vh;
-}
-
-#nav-bar.scrolled a{
-    color: white;
 }
 
 #nav-bar ol{
@@ -192,11 +204,23 @@ section{
 #nav-bar li:hover{
     scale: 1.1;
     transition: 0.3s ease-in-out;
+    background: rgba(180, 232, 58, 0.56);
+    border-radius: 40px;
+    height: 1em;
+
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
 }
 
 #nav-bar a{
     color: black;
     text-decoration: none;
+}
+
+#nav-bar.scrolled li:hover{
+    background: white;
 }
 
 /*================[ CARD ]*/
@@ -322,7 +346,7 @@ section{
 }
 
 .mail p{
-    background: lightgray;
+    background: #B3E73A;
     border: 2px solid black;
 
     padding: 0.5em;
@@ -330,16 +354,24 @@ section{
     border-radius: 10px;
 }
 
+.mail p:hover{
+    
+    transition: 0.3s ease-in-out;
+    scale: 1.03;
+}
+
 /*================[ BUTTONS ]*/
 
 button{
-    background: #16886b;
-    border: none;
+    background: #B3E73A;
+    border: 2px solid black;
 
     border-radius: 100%;
     height: 3em;
     width: 3em;
     text-align: center;
+
+    transition: 0.3s ease-in-out;
 }
 
 button .icon svg{
@@ -347,16 +379,23 @@ button .icon svg{
     height: 1.5em;
 }
 
+button:hover{
+    scale: 1.1;
+}
+
 button:active{
-    scale: 0.9;
+    scale: 0.8;
 }
 
 /*================[ FOOTER ]*/
 
 footer{
-    color: white;
-    background: #16886b;
-    padding: 3em;
+    background: #ffffff;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(179, 231, 58, 1) 40%);
+    padding: 5em;
+
+    margin-top: 20vh;
+    margin-bottom: 0;
 
     display: flex;
     flex-direction: column;
