@@ -82,14 +82,14 @@ section{
 
     margin: 5% auto;
 
-    scroll-margin-top: 80px;
+    scroll-margin-top: 4.7em;
 }
 
 /*================[ BANNER ]*/
 .banner {
     position: relative;
 
-    height: 90vh;
+    height: 92vh;
     width: 100%;
 }
 
@@ -141,16 +141,19 @@ section{
 /*================[ NAV-BAR ]*/
 #divider{
     position: absolute;
-    height: 10vh;
+    height: 8vh;
     width: 100%;
+
+    background: #16886b;
 }
 
 #nav-bar{
-    background: none;
+    background: white;
     transition: background 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
-
+    
     width: fit-content;
-    height: 10vh;
+    height: 8vh;
+    border-radius: 0 0 10px 10px;
 
     display: flex;
     align-items: center;
@@ -327,9 +330,31 @@ section{
     border-radius: 10px;
 }
 
+/*================[ BUTTONS ]*/
+
+button{
+    background: #16886b;
+    border: none;
+
+    border-radius: 100%;
+    height: 3em;
+    width: 3em;
+    text-align: center;
+}
+
+button .icon svg{
+    width: 1.5em;
+    height: 1.5em;
+}
+
+button:active{
+    scale: 0.9;
+}
+
 /*================[ FOOTER ]*/
 
 footer{
+    color: white;
     background: #16886b;
     padding: 3em;
 
