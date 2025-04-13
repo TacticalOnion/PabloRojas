@@ -218,6 +218,10 @@ section{
     transition: 0.3s ease-in-out;
 }
 
+.card p{
+    margin: 1em auto 1em auto;
+}
+
 /*================[ ABOUT ME ]*/
 #about-me .card{
     display: flex;
@@ -285,6 +289,10 @@ section{
     height: 2em;
 }
 
+#education .card p{
+    margin: auto auto 1em auto;
+}
+
 .certificate{
     position: relative;
 }
@@ -311,7 +319,7 @@ section{
 }
 
 .mail p{
-    background: gray;
+    background: lightgray;
     border: 2px solid black;
 
     padding: 0.5em;
