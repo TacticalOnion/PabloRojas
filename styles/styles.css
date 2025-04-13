@@ -6,6 +6,10 @@
     font-family: "Oxanium", sans-serif;
 }
 
+ul,ol{
+    list-style: none;
+}
+
 /*================[ BODY ]*/
 body{
     background: white;
@@ -24,8 +28,12 @@ section{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     width: 70vw;
+    max-width: 800px;
+
     margin: 5% auto;
+
     scroll-margin-top: 80px;
 }
 
@@ -109,7 +117,6 @@ section{
 }
 
 #nav-bar ol{
-    list-style: none;
     display: flex;
     flex-direction: row;
     padding: 1em;
@@ -127,4 +134,97 @@ section{
 #nav-bar a{
     color: black;
     text-decoration: none;
+}
+
+/*================[ CARD ]*/
+.card{
+    background: red;
+    border-radius: 10px;
+
+    width: 100%;
+
+    margin: 5% auto;
+}
+
+.card-content{
+    padding: 3em;
+}
+
+/*================[ ABOUT ME ]*/
+#about-me .card{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+#about-me img{
+    width: 30%;
+    
+}
+
+/*================[ EXPERIENCE ]*/
+#experience .card-content{
+    text-align: center;
+}
+
+/*================[ PROJECTS ]*/
+#projects .card{
+    display: flex;
+    flex-direction: row;
+}
+
+#projects img{
+    width: 50%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/*================[ EDUCATION ]*/
+
+#education .card{
+    display: flex;
+    flex-direction: column;
+
+    width: 50%;
+}
+
+#education img{
+    width: 100%;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/*================[ EDUCATION ]*/
+.mail{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 2em;
+
+    width: 80%;
+}
+
+.mail p{
+    background: red;
+    border: 2px solid black;
+
+    padding: 0.5em;
+    width: 80%;
+    border-radius: 5px;
+}
+
+/*================[ FOOTER ]*/
+
+footer{
+    background: red;
+    padding: 3em;
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
 }
