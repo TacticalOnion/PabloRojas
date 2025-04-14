@@ -93,7 +93,7 @@ section {
   width: 70vw;
   max-width: 800px;
   margin: 5% auto;
-  scroll-margin-top: 4.7em;
+  scroll-margin-top: 10;
 }
 
 /*================[ BANNER ]*/
@@ -229,8 +229,6 @@ section {
   background: white;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  width: 100%;
-  margin: 5% auto;
 }
 
 .card-content {
@@ -238,7 +236,7 @@ section {
 }
 
 .card:hover {
-  scale: 1.1;
+  scale: 1.02;
   transition: 0.3s ease-in-out;
 }
 
@@ -268,10 +266,6 @@ section {
 }
 
 /*================[ EXPERIENCE ]*/
-#experience .card {
-  width: 70%;
-}
-
 #experience .card-content {
   display: flex;
   flex-direction: column;
@@ -295,7 +289,6 @@ section {
 #education .card {
   display: flex;
   flex-direction: column;
-  width: 50%;
 }
 
 #education img {
