@@ -356,6 +356,7 @@ section {
   top: 20px;
   background: #B3E73A;
   padding: 1rem;
+  display: none;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
   z-index: 2;
