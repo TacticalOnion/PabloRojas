@@ -93,7 +93,7 @@ section {
   width: 70vw;
   max-width: 800px;
   margin: 5% auto;
-  scroll-margin-top: 10;
+  scroll-margin-top: 10vh;
 }
 
 /*================[ BANNER ]*/
@@ -226,8 +226,11 @@ section {
 /*================[ CARD ]*/
 .card {
   color: black;
+  outline: rgba(220, 220, 220,0.2) 2px solid;
   background: white;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
   border-radius: 10px;
 }
 
@@ -251,6 +254,7 @@ section {
   gap: 1em;
   box-shadow: none;
   background: none;
+  outline: none;
 }
 
 #about-me .card-content {

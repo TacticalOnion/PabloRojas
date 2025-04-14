@@ -5,6 +5,7 @@ const noBullets = false;
 
 
 const container = document.querySelector('.slider-container');
+const containerArrows = document.querySelector('.slider-content');
 var slide = document.querySelectorAll('.slider-single');
 var slideTotal = slide.length - 1;
 var slideCurrent = -1;
@@ -54,8 +55,8 @@ function initArrows() {
         slideRight();
     });
 
-    container.appendChild(leftArrow);
-    container.appendChild(rightArrow);
+    containerArrows.appendChild(leftArrow);
+    containerArrows.appendChild(rightArrow);
 }
 
 function slideInitial() {

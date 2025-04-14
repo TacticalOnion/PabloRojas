@@ -1,11 +1,9 @@
 .slider-container {
-  outline: 4px solid red;
   position: relative;
   width: 100vw;
-  height: 70vh;
+  height: 80vh;
 }
 .slider-container .bullet-container {
-  outline: 2px solid purple;
   position: absolute;
   bottom: 0;
   height: 10%;
@@ -28,8 +26,7 @@
 .slider-container .bullet-container .bullet.active {
   opacity: 1;
 }
-.slider-container .slider-content-experience {
-  outline: 4px solid yellow;
+.slider-container .slider-content {
   position: relative;
   left: 50%;
   top: 50%;
@@ -37,77 +34,83 @@
   height: 80%;
   transform: translate(-50%, -50%);
 }
-.slider-container .slider-content-experience .slider-single {
-  outline: 2px solid green;
+.slider-container .slider-content .slider-single {
   position: absolute;
   z-index: 0;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   transition: z-index 0ms 250ms;
 }
-.slider-container .slider-content-experience .slider-single .card {
-  outline: 2px dashed black;
+.slider-container .slider-content .slider-single .card {
   position: relative;
   left: 0;
   top: 0;
   height: 100%;
   width: 100%;
+  max-width: 500px;
   transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);
   transform: scale(0);
   opacity: 0;
 }
-.slider-container .slider-content-experience .slider-single.preactivede .card {
+.slider-container .slider-content .slider-single.preactivede .card {
   transform: translateX(-25%) scale(0);
 }
-.slider-container .slider-content-experience .slider-single.preactive {
+.slider-container .slider-content .slider-single.preactive {
   z-index: 1;
 }
-.slider-container .slider-content-experience .slider-single.preactive .card {
+.slider-container .slider-content .slider-single.preactive .card {
   opacity: 0.3;
   transform: translateX(-25%) scale(0.8);
 }
-.slider-container .slider-content-experience .slider-single.proactive {
+.slider-container .slider-content .slider-single.proactive {
   z-index: 1;
 }
-.slider-container .slider-content-experience .slider-single.proactive .card {
+.slider-container .slider-content .slider-single.proactive .card {
   opacity: 0.3;
   transform: translateX(25%) scale(0.8);
 }
-.slider-container .slider-content-experience .slider-single.proactivede .card {
+.slider-container .slider-content .slider-single.proactivede .card {
   transform: translateX(50%) scale(0);
 }
-.slider-container .slider-content-experience .slider-single.active {
+.slider-container .slider-content .slider-single.active {
   z-index: 2;
 }
-.slider-container .slider-content-experience .slider-single.active .card {
+.slider-container .slider-content .slider-single.active .card {
   opacity: 1;
   transform: translateX(0%) scale(1);
 }
 .slider-container .slider-left {
-  position: absolute;
   z-index: 3;
+  position: absolute;
   display: block;
-  right: 85%;
+  left: 0;
   top: 50%;
-  color: #ffffff;
   transform: translateY(-50%);
+  color: #ffffff;
   padding: 20px 15px;
-  border: 2px solid #fdc84b;
   margin-right: -2px;
+}
+.slider-container .slider-left img {
+  height: 3rem;
 }
 .slider-container .slider-right {
   position: absolute;
-  z-index: 3;
+  z-index: 4;
   display: block;
-  left: 85%;
+  right: 0;
   top: 50%;
   color: #ffffff;
   transform: translateY(-50%);
   padding: 20px 15px;
-  border: 2px solid #fdc84b;
   margin-left: -2px;
+}
+.slider-container .slider-right img {
+  height: 3rem;
 }
 .slider-container .not-visible {
   display: none !important;
@@ -115,4 +118,4 @@
 
 
 
-/*# sourceMappingURL=slides-experience.css.map */
+/*# sourceMappingURL=slider.css.map */
