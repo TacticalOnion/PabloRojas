@@ -52,7 +52,6 @@
   top: 0;
   height: 100%;
   width: 100%;
-  max-width: 500px;
   transition: 500ms cubic-bezier(0.17, 0.67, 0.55, 1.43);
   transform: scale(0);
   opacity: 0;
@@ -97,6 +96,7 @@
 }
 .slider-container .slider-left img {
   height: 3rem;
+  width: 3rem;
 }
 .slider-container .slider-right {
   position: absolute;
@@ -111,6 +111,7 @@
 }
 .slider-container .slider-right img {
   height: 3rem;
+  width: 3rem;
 }
 .slider-container .not-visible {
   display: none !important;
