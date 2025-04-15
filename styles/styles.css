@@ -299,10 +299,13 @@ section {
 #education .card {
   display: flex;
   flex-direction: column;
+
+  max-width: 500px;
 }
 
-#education img {
+#education .card-img {
   width: 100%;
+  height: 100%;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -318,6 +321,7 @@ section {
 
 .certificate {
   position: relative;
+  height: 60%;
 }
 
 .certificate a {
