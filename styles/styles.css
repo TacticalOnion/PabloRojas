@@ -109,13 +109,6 @@ section {
   z-index: 2;
 }
 
-.water-ripples {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  z-index: 1;
-}
-
 .banner h1 {
   font-size: 15vh;
   line-height: 1;
@@ -303,6 +296,10 @@ section {
   max-width: 500px;
 }
 
+#education .card-content{
+  padding-top: 1.5em;
+}
+
 #education .card-img {
   width: 100%;
   height: 100%;
@@ -321,7 +318,7 @@ section {
 
 .certificate {
   position: relative;
-  height: 60%;
+  height: 55%;
 }
 
 .certificate a {
@@ -413,6 +410,14 @@ footer {
   flex-direction: column;
   align-content: center;
   text-align: center;
+}
+
+/*================[ WATER RIPPLES ]*/
+.water-ripples-background{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
 }
 
 /*# sourceMappingURL=styles.css.map */
