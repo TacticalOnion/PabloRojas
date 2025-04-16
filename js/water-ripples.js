@@ -18,5 +18,5 @@ $(document).ready(function() {
 		var strength = 0.04 + Math.random() * 0.04;
 
 		$el.ripples('drop', x, y, dropRadius, strength);
-	}, 400);
+	}, 200);
 });
