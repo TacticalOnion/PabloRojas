@@ -30,7 +30,7 @@ function createSlider(container) {
 
         const leftArrow = document.createElement('a');
         const imgLeft = document.createElement('img');
-        imgLeft.src = '../assets/icons/arrow-left.svg';
+        imgLeft.src = './assets/icons/arrow-left.svg';
         imgLeft.alt = 'Flecha izquierda';
         leftArrow.classList.add('slider-left');
         leftArrow.appendChild(imgLeft);
@@ -38,7 +38,7 @@ function createSlider(container) {
 
         const rightArrow = document.createElement('a');
         const imgRight = document.createElement('img');
-        imgRight.src = '../assets/icons/arrow-right.svg';
+        imgRight.src = './assets/icons/arrow-right.svg';
         imgRight.alt = 'Flecha derecha';
         rightArrow.classList.add('slider-right');
         rightArrow.appendChild(imgRight);
