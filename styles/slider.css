@@ -57,24 +57,24 @@
   opacity: 0;
 }
 .slider-container .slider-content .slider-single.preactivede .card {
-  transform: translateX(-25%) scale(0);
+  transform: translateX(-10%) scale(0);
 }
 .slider-container .slider-content .slider-single.preactive {
   z-index: 1;
 }
 .slider-container .slider-content .slider-single.preactive .card {
   opacity: 0.3;
-  transform: translateX(-25%) scale(0.8);
+  transform: translateX(-10%) scale(0.8);
 }
 .slider-container .slider-content .slider-single.proactive {
   z-index: 1;
 }
 .slider-container .slider-content .slider-single.proactive .card {
   opacity: 0.3;
-  transform: translateX(25%) scale(0.8);
+  transform: translateX(0%) scale(0.8);
 }
 .slider-container .slider-content .slider-single.proactivede .card {
-  transform: translateX(50%) scale(0);
+  transform: translateX(0%) scale(0);
 }
 .slider-container .slider-content .slider-single.active {
   z-index: 2;

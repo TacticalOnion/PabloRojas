@@ -34,7 +34,6 @@ $mode: cubic-bezier(0.17, 0.67, 0.55, 1.43);
             }
         }
     }.slider-content{
-
         position: relative;
         left: 50%;
         top: 50%;
@@ -75,26 +74,30 @@ $mode: cubic-bezier(0.17, 0.67, 0.55, 1.43);
                 //z-index: 0;
                 .card {
                   //opacity: 0;
-                  transform: translateX(-25%) scale(0);
+                  //transform: translateX(-25%) scale(0);
+                  transform: translateX(clamp(-10%, -25%, 0%)) scale(0);
                 }
             }
             &.preactive{
                 z-index: 1;
                 .card {
                     opacity: 0.3;
-                    transform: translateX(-25%) scale(0.8);
+                    //transform: translateX(-25%) scale(0.8);
+                    transform: translateX(clamp(-10%, -25%, 0%)) scale(0.8);
                 }
             }&.proactive{
                 z-index: 1;
                 .card {
                     opacity: 0.3;
-                    transform: translateX(25%) scale(0.8);
+                    //transform: translateX(25%) scale(0.8);
+                    transform: translateX(clamp(10%, 25%, 0%)) scale(0.8);
                 }
             }&.proactivede {
                 //z-index: 0;
                 .card {
                   //opacity: 0;
-                  transform: translateX(50%) scale(0);
+                  //transform: translateX(25%) scale(0);
+                  transform: translateX(clamp(10%, 25%, 0%)) scale(0);
                 }
             }&.active {
                 z-index: 2;
