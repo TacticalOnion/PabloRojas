@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Oxanium", sans-serif;
+  cursor: url('../assets/cursors/cursor.cur'), auto;
 }
 
 ul, ol {
