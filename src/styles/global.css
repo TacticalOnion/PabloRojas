@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+    --font-oxanium: "Oxanium", sans-serif;
+}
+
+.water-ripples-background{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 4;
+}
+
+*{
+  cursor: url('../cursors/cursor.cur'), auto;
+}

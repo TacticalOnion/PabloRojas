@@ -31,4 +31,3 @@ $(document).ready(function () {
 		$el.ripples('drop', x, y, 20, 0.04 + Math.random() * 0.04);
 	});
 });
-

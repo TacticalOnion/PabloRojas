@@ -1,0 +1,58 @@
+---
+import { CircleArrowDown } from '@lucide/astro';
+---
+
+<header id="home" class="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden">
+
+  {/* Video container */}
+  <div class="relative w-[95vw] h-[90vh] aspect-video flex flex-col items-center justify-start rounded-3xl shadow-xl overflow-hidden">
+
+    {/* Trapeze */}
+    <div
+      class="absolute left-1/2 top-0 z-3"
+      style="
+        width: 50%;
+        transform: translateX(-50%);
+        height: 40px;
+        max-height: 5vw;
+        clip-path: polygon(0 0, 12.5% 100%, 87.5% 100%, 100% 0);
+        background: white;
+      "
+    ></div>
+
+    {/* Video */}
+    <video
+      class="w-full h-full object-cover rounded-3xl z-0"
+      src="/assets/background/background.mp4"
+      autoplay
+      loop
+      muted
+      playsinline
+    ></video>
+
+    {/* Overlay */}
+    <div class="absolute inset-0 bg-black/50 pointer-events-none rounded-3xl z-1"></div>
+    <div class="water-ripples-background"></div>
+
+    {/* Name and rol */}
+    <div class="absolute inset-0 flex flex-col items-center justify-center z-3">
+      <h1 class="font-oxanium text-5xl sm:text-8xl font-extrabold text-white text-center mb-2 drop-shadow-lg">
+        Pablo Rojas
+      </h1>
+      <p class="font-oxanium text-3xl sm:text-5xl text-white text-center drop-shadow-md">
+        Frontend Dev
+      </p>
+    </div>
+
+    {/* Buttom */}
+    <button
+      onclick="document.getElementById('next-section').scrollIntoView({ behavior: 'smooth' })"
+      class="absolute bottom-6 left-1/2 -translate-x-1/2 p-2 rounded-full bg-transparent hover:bg-black/10 transition z-40"
+      aria-label="Ir abajo"
+      type="button"
+    >
+      <CircleArrowDown class="w-12 h-12 text-lime-500" />
+    </button>
+  </div>
+  
+</header>
