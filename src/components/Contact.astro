@@ -1,0 +1,77 @@
+---
+import { Mail, Copy } from "@lucide/astro";
+const email = "pabloaxel.rojas@gmail.com";
+const subject = "Hola, vi tu página web";
+const body = "¡Hola Pablo! Vi tu página web y me gustaría contactarte.";
+const copyId = "copy-email";
+const sendId = "send-email";
+const alertId = "copy-email-alert";
+---
+
+<section 
+  id="contact" 
+  class="min-h-screen w-screen flex flex-col items-center justify-center py-12 px-4 font-oxanium"
+>
+  <h2 class="text-5xl md:text-6xl font-extrabold mb-6 text-center">Contacto</h2>
+  <p class="text-lg md:text-1xl mb-9 text-center">
+    Veo que te ha gustado mi trabajo, si quieres contactarme;<br />
+    envíame un correo :D
+  </p>
+
+  <!-- ALERTA Copiado -->
+  <div id={alertId} class="alert">
+    <p>¡Texto copiado al portapapeles!</p>
+  </div>
+
+  <div class="flex flex-col md:flex-row items-center gap-4 w-fit max-w-md">
+    <!-- Botón Email -->
+    <button class="copy-email-btn px-6 py-4 rounded-full bg-gray-200 hover:bg-lime-300 transition transition-transform hover:scale-110" aria-label="Copiar correo" type="button">
+      {email}
+    </button>
+    <div class="flex flex-row items-center gap-4">
+      <!-- Botón Enviar correo -->
+      <button id={sendId} class="p-2 rounded-full bg-gray-200 hover:bg-lime-300 transition transition-transform hover:scale-110" aria-label="Enviar correo" type="button">
+        <Mail class="w-10 h-10" stroke-width="1" />
+      </button>
+      <!-- Botón Copiar -->
+      <button class="copy-email-btn p-2 rounded-full bg-gray-200 hover:bg-lime-300 transition transition-transform hover:scale-110" aria-label="Copiar correo" type="button">
+        <Copy class="w-10 h-10" stroke-width="1" />
+      </button>
+    </div>
+  </div>
+
+    <!-- Scripts -->
+    <script src="/js/copy-email.js" defer></script>
+    <script src="/js/send-email.js" defer></script>
+
+  <!-- Estilos para la alerta -->
+  <style>
+    .alert {
+      position: fixed;
+      top: 20px;
+      background: #B3E73A;
+      padding: 1rem;
+      display: none;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      z-index: 2;
+      animation: fadeInOut 2s ease-in-out;
+      text-align: center;
+      min-width: 200px;
+      max-width: 90vw;
+      box-sizing: border-box;
+    }
+
+    .alert.show {
+      display: block;
+      animation: fadeInOut 2s ease-in-out;
+    }
+
+    @keyframes fadeInOut {
+      0%   { opacity: 0; transform: translateY(-20px);}
+      10%  { opacity: 1; transform: translateY(0);}
+      90%  { opacity: 1; }
+      100% { opacity: 0; transform: translateY(-10px);}
+    }
+  </style>
+</section>
