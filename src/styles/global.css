@@ -5,6 +5,14 @@
     --font-oxanium: "Oxanium", sans-serif;
 }
 
+*{
+  cursor: url('../cursors/cursor.cur'), auto;
+}
+
+html,body{
+  overflow-x: hidden;
+}
+
 .water-ripples-background{
   position: absolute;
   width: 100vw;
@@ -12,6 +20,29 @@
   z-index: 4;
 }
 
-*{
-  cursor: url('../cursors/cursor.cur'), auto;
+@keyframes float-up-down {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.animate-float-up-down {
+  animation: float-up-down 2s ease-in-out infinite;
+}
+
+.swiper{
+  --swiper-pagination-color: #bbf451;
+  --swiper-pagination-bullet-size: 12px;
+
+  --swiper-navigation-color: #bbf451;
+}
+
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 2.5rem;
 }

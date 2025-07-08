@@ -1,0 +1,84 @@
+---
+import { FileText } from '@lucide/astro';
+const photoUrl = "/assets/image/profile.png";
+---
+
+<section
+  id="about-me"
+  class="min-h-screen w-screen flex flex-col lg:flex-row items-center justify-center gap-6 px-4 py-10 bg-white font-oxanium"
+  style="min-height: 100vh; min-width: 100vw;"
+>
+  {/* TEXT + TAG */}
+  <div class="flex-1 flex flex-col items-start justify-center max-w-2xl w-full">
+    
+    <h2 class="text-5xl md:text-6xl font-extrabold mb-2">Sobre mi</h2>
+    <button
+      onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })"
+      class="mb-6 px-6 py-2 rounded-md bg-lime-500 text-black font-bold shadow hover:scale-95 transition-all duration-100 active:scale-90 text-lg focus:outline-none"
+    >
+      Disponible para trabajar
+    </button>
+    <p class="text-xl md:text-2xl mb-6 text-left">
+      Soy Pablo Rojas; licenciado en Informática y apasionado por el <b>diseño</b> enfocado en el <b>desarrollo web</b>.
+    </p>
+    <p class="text-xl md:text-2xl mb-6 text-left">
+      Para mí <b>el desarrollo es libertad</b>: libertad de convertir las ideas en sueños lúcidos a través de la tecnología. Este sentimiento de libertad lo describen muy bien Grady Booch et al.
+    </p>
+    <blockquote class="italic border-l-4 border-lime-500 pl-4 mb-8 text-base md:text-lg">
+      "... <span class="font-bold">the software engineer has considerably more degrees of freedom</span>—as if the electrical engineer had a silicon foundry at his or her disposal."
+    </blockquote>
+  </div>
+
+  {/* IMAGE + BUTTONS */}
+  <div class="flex flex-col items-center justify-center flex-shrink-0 w-full md:w-[70vw] lg:w-[40vw]">
+    {/* Imagen y fondo verde redondeado */}
+    <div class="relative w-full flex items-center justify-center mb-6 md:mb-10">
+      <div class="absolute inset-0 rounded-[2.5rem] w-full h-full scale-95 z-0"></div>
+      <img
+        src={photoUrl}
+        alt="Foto de Pablo Rojas"
+        class="relative w-full max-w-[70vw] lg:max-w-[35vw] min-w-[250px] object-cover"
+        style="width: 70vw;"
+      />
+    </div>
+    {/* Botones */}
+    <div
+      class="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full max-w-[70vw] lg:max-w-[40vw] min-w-[250px] mx-auto"
+      style="width: 70vw;"
+    >
+      {/* Botón Curriculum */}
+      <a
+        href="/assets/doc/cv.pdf"
+        target="_blank"
+        rel="noopener"
+        class="flex items-center justify-center gap-2 py-2 rounded-md bg-lime-500 text-black font-semibold shadow hover:scale-95 active:scale-90 transition-all duration-100 text-lg"
+        aria-label="Ver Curriculum"
+      >
+        <FileText class="w-6 h-6" />
+        Curriculum
+      </a>
+      {/* Botón LinkedIn */}
+      <a
+        href="http://linkedin.com/in/pablo-rojas-ti"
+        target="_blank"
+        rel="noopener"
+        class="flex items-center justify-center gap-2 py-2 rounded-md bg-lime-500 text-black font-semibold shadow hover:scale-95 active:scale-90 transition-all duration-100 text-lg"
+        aria-label="LinkedIn"
+      >
+        <img src="/assets/icons/linkedin.svg" alt="LinkedIn" class="w-6 h-6" />
+        LinkedIn
+      </a>
+      {/* Botón GitHub */}
+      <a
+        href="https://github.com/TacticalOnion"
+        target="_blank"
+        rel="noopener"
+        class="flex items-center justify-center gap-2 py-2 rounded-md bg-lime-500 text-black font-semibold shadow hover:scale-95 active:scale-90 transition-all duration-100 text-lg"
+        aria-label="GitHub"
+      >
+        <img src="/assets/icons/github.svg" alt="GitHub" class="w-6 h-6" />
+        GitHub
+      </a>
+    </div>
+  </div>
+</section>
